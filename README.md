@@ -45,7 +45,7 @@ func main() {
     }
 
     // Test
-    testSet, err := spam.LoadComments("./fixtures/Youtube02-KatyPerry.csv")
+    testSet, err := spam.LoadComments("./fixtures/Youtube05-Shakira.csv")
     if err != nil {
         panic(err)
     }
@@ -65,6 +65,6 @@ func main() {
 ```
 Running the above would give you this output:
 ```
-Classified 347/350 correctly
+Classified 275/370 correctly
 ```
 Ship it.

@@ -31,7 +31,7 @@ func TestClassifier(t *testing.T) {
 	}
 
 	// Test
-	testSet, err := spam.LoadComments("./fixtures/Youtube02-KatyPerry.csv")
+	testSet, err := spam.LoadComments("./fixtures/Youtube05-Shakira.csv")
 	if err != nil {
 		t.Fatal(err)
 	}

@@ -19,9 +19,14 @@ type Comment struct {
 func (c Comment) Features() []string {
 	var out []string
 	out = append(out, "[author]"+c.Author)
+	n := 2
 	words := strings.Split(removeSpecialChars(strings.ToLower(c.Content)), " ")
-	for i := 1; i < len(words); i++ {
-		out = append(out, "[content]"+words[i-1]+" "+words[i])
+	for i := 0; i < len(words)-n; i++ {
+		feature := "[content]"
+		for j := 0; j < n; j++ {
+			feature += words[i+j] + " "
+		}
+		out = append(out, strings.TrimSpace(feature))
 	}
 	return out
 }
